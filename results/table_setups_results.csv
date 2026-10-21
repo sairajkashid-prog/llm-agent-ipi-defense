@@ -1,0 +1,7 @@
+Setup,L1,L2,L3,L4,Ranking_ASR_pct,Data_ASR_pct,Overall_ASR_pct,ASR_std,BTS_pct,FPR_pct
+No defense,Off,Off,Off,Off,78.3,88.2,82.5,7.1,100.0,0.0
+Layer 1 only,On,Off,Off,Off,5.8,11.8,8.3,1.2,95.0,5.0
+Layer 2 only,Off,On,Off,Off,0.0,9.8,4.2,2.4,100.0,0.0
+Layer 3 only,Off,Off,On,Off,84.1,0.0,48.3,1.2,100.0,0.0
+Layer 4 only,Off,Off,Off,On,79.7,0.0,45.8,3.1,100.0,0.0
+All layers,On,On,On,On,0.0,0.0,0.0,0.0,95.0,5.0

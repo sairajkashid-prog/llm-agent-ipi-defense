@@ -1,0 +1,144 @@
+{
+  "heldout_prompt_classifier_metrics": {
+    "TP": 40,
+    "FP": 0,
+    "TN": 42,
+    "FN": 2,
+    "FPR": 0.0,
+    "Precision": 100.0,
+    "Recall": 95.24,
+    "F1": 97.56
+  },
+  "resume_classifier_only_metrics": {
+    "TP": 30,
+    "FP": 1,
+    "TN": 19,
+    "FN": 10,
+    "FPR": 5.0,
+    "Precision": 96.77,
+    "Recall": 75.0,
+    "F1": 84.51
+  },
+  "resume_full_layer1_metrics": {
+    "TP": 36,
+    "FP": 1,
+    "TN": 19,
+    "FN": 4,
+    "FPR": 5.0,
+    "Precision": 97.3,
+    "Recall": 90.0,
+    "F1": 93.51
+  },
+  "hiding_method_detection": {
+    "white_text": {
+      "total": 6,
+      "detected_l1": 6,
+      "detected_clf_only": 6
+    },
+    "tiny_text": {
+      "total": 6,
+      "detected_l1": 6,
+      "detected_clf_only": 6
+    },
+    "off_page": {
+      "total": 5,
+      "detected_l1": 5,
+      "detected_clf_only": 5
+    },
+    "behind_shape": {
+      "total": 5,
+      "detected_l1": 5,
+      "detected_clf_only": 5
+    },
+    "reworded_attack": {
+      "total": 10,
+      "detected_l1": 6,
+      "detected_clf_only": 5
+    },
+    "disguised_text": {
+      "total": 8,
+      "detected_l1": 8,
+      "detected_clf_only": 3
+    }
+  },
+  "setup_ablation_results": [
+    {
+      "Setup": "No defense",
+      "L1": "Off",
+      "L2": "Off",
+      "L3": "Off",
+      "L4": "Off",
+      "Ranking_ASR_pct": 78.3,
+      "Data_ASR_pct": 88.2,
+      "Overall_ASR_pct": 82.5,
+      "ASR_std": 7.1,
+      "BTS_pct": 100.0,
+      "FPR_pct": 0.0
+    },
+    {
+      "Setup": "Layer 1 only",
+      "L1": "On",
+      "L2": "Off",
+      "L3": "Off",
+      "L4": "Off",
+      "Ranking_ASR_pct": 5.8,
+      "Data_ASR_pct": 11.8,
+      "Overall_ASR_pct": 8.3,
+      "ASR_std": 1.2,
+      "BTS_pct": 95.0,
+      "FPR_pct": 5.0
+    },
+    {
+      "Setup": "Layer 2 only",
+      "L1": "Off",
+      "L2": "On",
+      "L3": "Off",
+      "L4": "Off",
+      "Ranking_ASR_pct": 0.0,
+      "Data_ASR_pct": 9.8,
+      "Overall_ASR_pct": 4.2,
+      "ASR_std": 2.4,
+      "BTS_pct": 100.0,
+      "FPR_pct": 0.0
+    },
+    {
+      "Setup": "Layer 3 only",
+      "L1": "Off",
+      "L2": "Off",
+      "L3": "On",
+      "L4": "Off",
+      "Ranking_ASR_pct": 84.1,
+      "Data_ASR_pct": 0.0,
+      "Overall_ASR_pct": 48.3,
+      "ASR_std": 1.2,
+      "BTS_pct": 100.0,
+      "FPR_pct": 0.0
+    },
+    {
+      "Setup": "Layer 4 only",
+      "L1": "Off",
+      "L2": "Off",
+      "L3": "Off",
+      "L4": "On",
+      "Ranking_ASR_pct": 79.7,
+      "Data_ASR_pct": 0.0,
+      "Overall_ASR_pct": 45.8,
+      "ASR_std": 3.1,
+      "BTS_pct": 100.0,
+      "FPR_pct": 0.0
+    },
+    {
+      "Setup": "All layers",
+      "L1": "On",
+      "L2": "On",
+      "L3": "On",
+      "L4": "On",
+      "Ranking_ASR_pct": 0.0,
+      "Data_ASR_pct": 0.0,
+      "Overall_ASR_pct": 0.0,
+      "ASR_std": 0.0,
+      "BTS_pct": 95.0,
+      "FPR_pct": 5.0
+    }
+  ]
+}
