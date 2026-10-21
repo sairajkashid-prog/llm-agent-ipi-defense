@@ -885,6 +885,36 @@ def build_pdf(pdf_path: str):
         ),
     ]))
 
+    # DECLARATIONS (Mandatory for SpringerOpen Cybersecurity)
+    story.append(Paragraph("DECLARATIONS", st_h1))
+    story.append(Paragraph(
+        "<b>Availability of data and materials:</b> The synthetic resume PDF dataset (60 PDFs), "
+        "four-layer defense implementation, and evaluation scripts supporting the conclusions of this article "
+        "are publicly available in the GitHub repository at https://github.com/sairajkashid-prog/llm-agent-ipi-defense.",
+        st_body,
+    ))
+    story.append(Paragraph(
+        "<b>Competing interests:</b> The authors declare that they have no competing interests.",
+        st_body,
+    ))
+    story.append(Paragraph(
+        "<b>Funding:</b> This research received no external funding. Article processing charges in "
+        "<i>Cybersecurity</i> (SpringerOpen) are sponsored by the Institute of Information Engineering (IIE), CAS.",
+        st_body,
+    ))
+    story.append(Paragraph(
+        "<b>Authors\u2019 contributions:</b> S.G. and S.K. designed the four-layer defense architecture and "
+        "implemented the PDF inspection and evaluation pipeline. H.G. and R.J. developed the synthetic "
+        "resume dataset and conducted the literature survey. K.S. analyzed the experimental metrics and "
+        "prepared the figures and tables. All authors read and approved the final manuscript.",
+        st_body,
+    ))
+    story.append(Paragraph(
+        "<b>Acknowledgements:</b> The authors thank the Department of Computer Engineering and Technology, "
+        "Dr. Vishwanath Karad MIT World Peace University, Pune, India, for academic support.",
+        st_body,
+    ))
+
     # REFERENCES
     story.append(Paragraph("REFERENCES", st_h1))
     for ref in REFERENCES_LIST:
@@ -1119,6 +1149,13 @@ def build_docx(docx_path: str):
 
     add_sec_heading("VIII. CONCLUSION")
     add_body("We presented and tested a four-layer defense against indirect prompt injection in resume PDFs. Across 60 synthetic resumes, combining hidden-text inspection, untrusted-data rank verification, tool least privilege, and email domain filtering reduced overall attack success from 82.5% to 0.0% with 95.0% benign task success.")
+
+    add_sec_heading("DECLARATIONS")
+    add_body("Availability of data and materials: The synthetic resume PDF dataset (60 PDFs), four-layer defense implementation, and evaluation scripts are publicly available at https://github.com/sairajkashid-prog/llm-agent-ipi-defense.")
+    add_body("Competing interests: The authors declare that they have no competing interests.")
+    add_body("Funding: This research received no external funding.")
+    add_body("Authors' contributions: S.G. and S.K. designed the four-layer defense and implemented the evaluation pipeline. H.G. and R.J. constructed the synthetic dataset and literature review. K.S. analyzed the metrics and prepared the figures. All authors read and approved the final manuscript.")
+    add_body("Acknowledgements: The authors thank the Department of Computer Engineering and Technology, Dr. Vishwanath Karad MIT World Peace University, Pune, India, for academic support.")
 
     add_sec_heading("REFERENCES")
     for ref in REFERENCES_LIST:
